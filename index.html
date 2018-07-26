@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+	
+	<!-- 布局dom结构 -->
+	<div id="bg"></div>
+	<div id="header"></div>
+	<div id="home"></div>
+	<script type="text/javascript" src="sea.js"></script>
+	<script type="text/javascript" src="js/seajs-css.js"></script>
+	<script type="text/javascript" src="js/seajs-preload.js"></script>
+	<script type="text/javascript">
+		// 配置
+		seajs.config({
+			preload: ["js/MVC", "js/jquery-1.12.3.min"]
+		});
+
+		// 使用模块化方式引入入口文件
+		seajs.use("main", function() {
+			// 加载完main模块之后执行的回调函数
+			MVC.install();
+		});
+	</script>
+</body>
+</html>
